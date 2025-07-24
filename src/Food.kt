@@ -1,5 +1,4 @@
-abstract class Food {
-    abstract val name: String
-    abstract val price: Double
-    abstract fun cook()
+abstract class Food(val name: String, val price: Double) {
+    abstract fun cook(): String
+
 }
