@@ -2,7 +2,7 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
     fun Food.discountedPrice(porcentaje: Int) : Double {
-        return (price - ((porcentaje / 100) * price))
+        return price - ((porcentaje.toDouble() / 100) * price)
     }
     val hamburguesa = Burger("Hamburguesa con queso", 35.0)
     println(hamburguesa.cook())
@@ -15,6 +15,6 @@ fun main() {
     println(jugo.pour())
 
     println(helado.eat())
-    println("${hamburguesa.name} normalmente cuesta Q${hamburguesa.price}, ahora con descuento cuesta Q${hamburguesa.discountedPrice(50)}.")
+    println("${hamburguesa.name} normalmente cuesta Q${hamburguesa.price}, ahora con descuento cuesta Q${hamburguesa.discountedPrice(10)}.")
 
 }
